@@ -78,7 +78,7 @@ Switch              | Description
     Twitter Bearer Token: AAAAAAAAAAAAAAAAAAAAAMLheAAAAAAA0%2BuSeid%2BULvsea4JtiGRiSDSJSI%3DEUifiRBkKG5E2XzMDjRfl76ZC9Ub0wnz4XsNiRVBChTYbJcE3F
     ```
 
-1. Look up user based on Twitter username
+2. Look up user based on Twitter username
     ```console
     ~$ python3 twitterthing.py lookup --username twitter
 
@@ -90,7 +90,7 @@ Switch              | Description
     0.1938 seconds
     ```
 
-2. Look up user based on Twitter ID
+3. Look up user based on Twitter ID
     ```console
     ~$ python3 twitterthing.py lookup --id 783214
 
@@ -102,7 +102,7 @@ Switch              | Description
     0.1938 seconds
     ```
 
-3. Retrieve the 10 most recent Tweets
+4. Retrieve the 10 most recent Tweets
     ```console
     ~$ python3 twitterthing.py search --username twitter
 
@@ -129,7 +129,7 @@ Switch              | Description
     Retrieved 10 most recent Tweets in 0.6986 seconds
     ```
 
-4. Retrieve the 10 most recent Tweets and output to Excel
+5. Retrieve the 10 most recent Tweets and output to Excel
     ```console
     ~$ python3 twitterthing.py search --username twitter --output output.xlsx -f xlsx
 
@@ -155,10 +155,34 @@ Switch              | Description
 
     Retrieved 10 most recent Tweets in 1.0073 seconds
     ```
-5. Retrieve the 10 most recent Tweets between **2022-07-20** and **2022-07-22**
+
+6. Retrieve the 10 most recent Tweets between **2022-01-01** and **2022-07-22**
     ```console
-    ~$ python3 twitterthing.py search --username twitter --start 2022-07-20 --end 2022-07-22
+    ~$ python3 twitterthing.py search --username twitter --start 2022-01-01 --end 2022-07-22
+
+    +--------+---------+----------+
+    |   ID   |  Name   | Username |
+    +--------+---------+----------+
+    | 783214 | Twitter | Twitter  |
+    +--------+---------+----------+
+    +---------------------+---------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+    | Created             | Tweet ID            | Tweet                                                                                                                                        |
+    +---------------------+---------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+    | 2022-06-30 17:52:17 | 1542566710594658312 | if you've ever stolen a Tweet say sorry                                                                                                      |
+    | 2022-06-30 16:22:48 | 1542544188310437888 | RT @camerobradford: When two people who are dating both like one of my tweets, i like to picture them both laughing at it together while ho… |
+    | 2022-06-23 20:37:17 | 1540071516527890433 | @Arkunir non, toujours pas                                                                                                                   |
+    | 2022-06-23 19:48:13 | 1540059169771978754 | we would know                                                                                                                                |
+    | 2022-06-23 19:46:10 | 1540058653155278849 | ratios build character                                                                                                                       |
+    | 2022-06-21 21:14:00 | 1539355981854957568 | RT @pvrekhs: how do other people not constantly reply to their own tweets i always have extra info to add                                    |
+    | 2022-05-18 16:08:50 | 1526957996747722753 | RT @TwitterSpaces: Twitter Spaces are real live audio convos you can join from your couch. or the dog park. or the bathtub. wherever you ar… |
+    | 2022-04-01 17:50:07 | 1509951255388504066 | we are working on an edit button                                                                                                             |
+    | 2022-03-30 17:10:59 | 1509216629695168512 | @McDonalds we ordered those 5 months ago… we want snack wraps now                                                                            |
+    | 2022-03-30 16:42:16 | 1509209405937627143 | @lwtsphh he's defrosting for the single drop                                                                                                 |
+    +---------------------+---------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+    Retrieved 10 most recent Tweets in 0.5063 seconds
     ```
+
 ## Planned Features
 * [ ] Dump all Tweets
 * [ ] Retrieve more than 100 Tweets
