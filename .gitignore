@@ -1,0 +1,5 @@
+__pycache__/
+venv/
+api_keys.config
+*.xlsx
+*.csv
